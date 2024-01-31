@@ -13,7 +13,7 @@ const CardData: Card[] = [
     {
         id: 2,
         title: 'api 와장창 호출하지 않는 법',
-        desc: '도라에몽 하나 검색하는 데 api 호출을 9번이나 한다고!! api 호출하지 않는 법 알려줄게',
+        desc: '도라에몽 하나 검색하는 데 api 호출을 9번이나 한다고!! api 호출하지 않는 법 알려줄게 당신이 개발자라면 디바운스와 스로틀링에 대해 한 번쯤은 들어본 적이 있을 것이다.들어보지 못했다고? 그럼 지금부터 알아가면 되는 것! 난 디바운스와 스로틀링에 대해 개념적으로만 알고있었고, 실제로 코드에 적용해본 적은 없었다.',
         author: '가은',
         imageUrl: 'https://images.unsplash.com/photo-1509773896068-7fd415d91e2e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D',
         profileImg: 'https://example.com/profile2.jpg',  

@@ -6,8 +6,16 @@ import Header from "../../components/Header";
 import Card from "../../components/Card"
 import Body from "../../components/Body"
 import CardData from "../../datas/CardData.ts"
+import { useNavigate, useLocation } from 'react-router-dom'; 
+
 
 const HomePage = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleCardClick = () => {
+    navigate('/detail');
+  };
 
   return (
     <Background>
@@ -15,14 +23,17 @@ const HomePage = () => {
       <Body>
         <CardGrid>
           {CardData.map((cardData, index) => (
-            <Card
-              key={index}
-              imageUrl={cardData.imageUrl}
-              title={cardData.title}
-              desc={cardData.desc}
-              date={cardData.date}
-              author={cardData.author}
-            />
+            <div onClick={handleCardClick}>
+              <Card 
+                key={index}
+                imageUrl={cardData.imageUrl}
+                title={cardData.title}
+                desc={cardData.desc}
+                date={cardData.date}
+                author={cardData.author}
+              />
+            </div>
+              
           ))}
         </CardGrid>
       </Body>
