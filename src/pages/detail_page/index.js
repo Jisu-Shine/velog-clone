@@ -6,7 +6,7 @@ import Body from "../../components/Body";
 import Card from "../../components/Card"
 import CardData from "../../datas/CardData.ts"
 
-const MyPage = () => {
+const DetailPage = () => {
   return (
       <Background>
         <Header/>
@@ -19,19 +19,6 @@ const MyPage = () => {
               </Name>
             </Profile>
             <Div/>
-            <CardGrid>
-              {CardData.map((cardData, index) => (
-                <Card
-                  key={index}
-                  imageUrl={cardData.imageUrl}
-                  title={cardData.title}
-                  desc={cardData.desc}
-                  date={cardData.date}
-                  author={cardData.author}
-                  isMyPage={true}
-                />
-              ))}
-        </CardGrid>
           </CenterBody>
           
         </Body>
@@ -77,13 +64,6 @@ const CenterBody = styled.div`
   height: 100%;
 `;
 
-const CardGrid = styled.div`
-  width: 100%;
-  display: flex; // 변경: flex 레이아웃 사용
-  flex-direction: column; // 변경: 카드를 세로로 나열
-  gap: 30px; // 변경: 카드 간의 간격
-`;
-
-export default MyPage;
+export default DetailPage;
 
 

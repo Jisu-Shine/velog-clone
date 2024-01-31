@@ -3,9 +3,9 @@ import styled from "styled-components";
 import Background from "../../components/Background";
 import { IoArrowBack } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
-import "@toast-ui/editor/dist/toastui-editor.css";
-import "@toast-ui/editor/dist/theme/toastui-editor-dark.css";
-import { Editor } from "@toast-ui/react-editor";
+// import "@toast-ui/editor/dist/toastui-editor.css";
+// import "@toast-ui/editor/dist/theme/toastui-editor-dark.css";
+// import { Editor } from "@toast-ui/react-editor";
 
 const WritePage = () => {
   const [title, setTitle] = useState("");
@@ -16,13 +16,17 @@ const WritePage = () => {
     setTitle(event.target.value);
   };
 
-  const handleContentChange = (editor) => {
-    const editorValue = editor.getMarkdown();
-    setContent(editorValue);
+  const handleContentChange = (event) => {
+    setContent(event.target.value);
   };
 
   const handleExitButtonClick = () => {
     navigate('/'); // 나가기 버튼 클릭 시 homepage로 이동
+  };
+
+  const handlePublishButtonClick = () => {
+    //데이터 전송
+    navigate('/'); // 출간하기 버튼 클릭 시 homepage로 이동
   };
 
   return (
@@ -34,31 +38,37 @@ const WritePage = () => {
           value={title}
           onChange={handleTitleChange}
         />
-        <Div />
-        <Editor
-              height="100%"
-              initialValue="# 제목을 입력하세요"
-              // placeholder="당신의 이야기를 적어보세요..."
-              previewStyle={window.innerWidth > 1000 ? "vertical" : "tab"}
-              initialEditType="markdown"
-              hideModeSwitch={true}
-              toolbarItems={[
-                ["heading", "bold", "italic", "strike"],
-                ["hr", "quote"],
-                ["table", "image", "link"],
-                ["code", "codeblock"],
-                ["scrollSync"],
-              ]}
-              theme="dark"
-              usageStatistics={false}
-          />
+        {<Div />
+        // <Editor
+        //       height="100%"
+        //       initialValue="# 제목을 입력하세요"
+        //       // placeholder="당신의 이야기를 적어보세요..."
+        //       previewStyle={window.innerWidth > 1000 ? "vertical" : "tab"}
+        //       initialEditType="markdown"
+        //       hideModeSwitch={true}
+        //       toolbarItems={[
+        //         ["heading", "bold", "italic", "strike"],
+        //         ["hr", "quote"],
+        //         ["table", "image", "link"],
+        //         ["code", "codeblock"],
+        //         ["scrollSync"],
+        //       ]}
+        //       theme="dark"
+        //       usageStatistics={false}
+        // /> 
+          }
+          <WriteContent 
+          type="text"
+          placeholder="당신의 이야기를 적어보세요..."
+          value={content}
+          onChange={handleContentChange}/>
         
       </WriteContainer>
       <BottomContainer>
         <ExitButton onClick={handleExitButtonClick}>
           <IoArrowBack /> 나가기
         </ExitButton>
-        <PublishButton>출간하기</PublishButton>
+        <PublishButton onClick={handlePublishButtonClick}>출간하기</PublishButton>
       </BottomContainer>
     </Background>
   );
@@ -108,7 +118,7 @@ const WriteContent = styled.textarea`
 `;
 
 const BottomContainer = styled.div`
-  width: 80%;
+  width: 50%;
   max-width: 1000px;
   height: 10%;
   background-color: #2e2e2e;
@@ -143,7 +153,7 @@ const ExitButton = styled.button`
 const PublishButton = styled.button`
   height: 60%;
   color: black;
-  background-color: #63E6BE;
+  background-color:  #96F2D6;
   border: none;
   font-weight: bold;
   font-size: 24px;
@@ -156,7 +166,7 @@ const PublishButton = styled.button`
   margin-left: auto;
 
   &:hover {
-    background-color: #434343;
+    background-color: #63E6BE;
   }
 `;
 

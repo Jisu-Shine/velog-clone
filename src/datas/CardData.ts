@@ -8,7 +8,7 @@ const CardData: Card[] = [
         author: '신짓두',
         imageUrl: 'https://trboard.game.onstove.com/Data/TR/20180111/13/636512725318200105.jpg',
         profileImg: 'https://example.com/profile1.jpg',  
-        date: new Date(), 
+        date: '2024년 1월 23일', 
     },
     {
         id: 2,
@@ -17,16 +17,16 @@ const CardData: Card[] = [
         author: '가은',
         imageUrl: 'https://images.unsplash.com/photo-1509773896068-7fd415d91e2e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D',
         profileImg: 'https://example.com/profile2.jpg',  
-        date: new Date(),  
+        date: '2024년 1월 23일',
     },
     {
         id: 3,
         title: '나를 프로그래밍 해보자.',
-        desc: '블로그 글을 써야겠다는 생각은 하고 있었지만 뭔가 기술적인 새로움이나 적어봄직한 내용들이 없어서 주제를 찾다가 제 커뮤니티 개발자유머 채널에 올린',
+        desc: '블로그 글을 써야겠다는 생각은 하고 있었지만 뭔가 기술적인 새로움이나 적어봄직한 내용들이 없어서 주제를 찾다가 제 커뮤니티 개발자유머 채널에 올린겁니다용용ㅇㅇㅇㄴ러ㅏ너란어라ㅣㄴ얼ㄴ어라ㅓㅇ린라ㅓ이러니어ㅏㄹㄴ이ㅓ란어리나어',
         author: 'teo.yu',
         imageUrl: 'https://velog.velcdn.com/images/teo/post/4320ed12-8242-4245-b58b-c1f05445c5b7/image.png',
         profileImg: 'https://example.com/profile3.jpg',  
-        date: new Date(),  
+        date: '2024년 1월 23일',
     },
     {
         id: 4,
@@ -35,7 +35,7 @@ const CardData: Card[] = [
         author: '박진현',
         imageUrl: 'https://velog.velcdn.com/images/developerjhp/post/84dd735e-0032-4fa1-b632-397a5e6ec826/image.gif',
         profileImg: 'https://example.com/profile4.jpg',  
-        date: new Date(),  
+        date:'2024년 1월 23일',
     },
     {
         id: 5,
@@ -44,7 +44,7 @@ const CardData: Card[] = [
         author: 'Jun_Gyu',
         imageUrl: 'https://velog.velcdn.com/images/junkue20/post/ea3c4ac1-3ab9-4093-9c0c-a7941c26a874/image.png',
         profileImg: 'https://example.com/profile5.jpg',  
-        date: new Date(), 
+        date:'2024년 1월 23일',
     },
     {
         id: 6,
@@ -53,7 +53,7 @@ const CardData: Card[] = [
         author: '박진현',
         imageUrl: 'https://velog.velcdn.com/images/developerjhp/post/84dd735e-0032-4fa1-b632-397a5e6ec826/image.gif',
         profileImg: 'https://example.com/profile6.jpg', 
-        date: new Date(),  
+        date: '2024년 1월 23일',
     },
     {
         id: 7,
@@ -62,7 +62,7 @@ const CardData: Card[] = [
         author: 'Jun_Gyu',
         imageUrl: 'https://velog.velcdn.com/images/junkue20/post/ea3c4ac1-3ab9-4093-9c0c-a7941c26a874/image.png',
         profileImg: 'https://example.com/profile7.jpg',  
-        date: new Date(), 
+        date: '2024년 1월 23일',
     },
 ];
 

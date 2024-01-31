@@ -2,7 +2,7 @@ export interface Card {
     id: number;
     title: string;
     desc: string;
-    date: Date;
+    date: string;
     imageUrl: string;
     profileImg: string;
     author: string;

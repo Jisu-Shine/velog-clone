@@ -20,6 +20,7 @@ const HomePage = () => {
               imageUrl={cardData.imageUrl}
               title={cardData.title}
               desc={cardData.desc}
+              date={cardData.date}
               author={cardData.author}
             />
           ))}
@@ -29,6 +30,7 @@ const HomePage = () => {
   );
 };
 const CardGrid = styled.div`
+  margin-top: 50%;
   width: 100%;
   display: grid;
   justify-content: space-between;
