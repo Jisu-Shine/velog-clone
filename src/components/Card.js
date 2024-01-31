@@ -10,7 +10,9 @@ const Card = ({ imageUrl, title, desc, author }) => {
         <CardDesc>{desc}</CardDesc>
       </CardContent>
       <Div />
-      <CardAuthor>{author}</CardAuthor>
+      <AuthorContainer>
+        <By>by <CardAuthor>{author}</CardAuthor></By>
+      </AuthorContainer>
     </CardContainer>
   );
 };
@@ -22,11 +24,16 @@ const CardContainer = styled.div`
   overflow: hidden;
   display: block;
   margin: 10px;
+
+  &:hover {
+    transform: translateY(-7px);
+    transition: transform 0.7s ease;
+  }; 
 `;
 
 const CardImage = styled.img`
   display: absolute;
-  height: 45%;  
+  height: 45%;
   width: 100%;
   object-fit: cover;
 `;
@@ -54,21 +61,32 @@ const CardDesc = styled.div`
 `;
 
 const Div = styled.div`
-height: 1px;
-width: 100%;
-background-color: #2A2A2A;
+  height: 1px;
+  width: 100%;
+  background-color: #2A2A2A;
+`;
+
+const AuthorContainer = styled.div`
+  width: 100%;
+  height: 10%;
+  background-color: #1B1C1C;
+  padding-left: 16px;
+  justify-content: left;
+`;
+const By = styled.div`
+  color: gray;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
 `;
 
 const CardAuthor = styled.div`
-  height: 10%;
-  background-color: #1B1C1C;
   color: white;
   font-size: 14px;
   font-weight: bold;
-  display: flex;
   align-items: center;
-  justify-content: left;
+  padding: 5px;
 `;
-
 
 export default Card;

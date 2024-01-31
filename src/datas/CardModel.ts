@@ -1,7 +1,9 @@
 export interface Card {
     id: number;
     title: string;
-    author: string;
     desc: string;
+    date: Date;
     imageUrl: string;
+    profileImg: string;
+    author: string;
 }
